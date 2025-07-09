@@ -1,68 +1,63 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Princess Music Player 👑</title>
+    <title>Lovers Poems MP3 👑</title>
+    <link rel="stylesheet" href="styles.css"> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="styles.css">
 </head>
+<style>
+    body { 
+        background: #000 !important; 
+        color: white !important;
+        font-family: 'Segoe UI' !important;
+    }
+    .music-player {
+        display: flex !important;
+        width: 800px !important;
+        background: #1a1a1a !important;
+    }
+</style>
 <body>
-    <div class="player-container">
-        <div class="hearts">
-            <div class="heart"></div>
-            <div class="heart"></div>
-            <div class="heart"></div>
-        </div>
-        
-        <div class="album-art">
-            <div class="disc">
-                <img src="https://i.pinimg.com/564x/3e/6d/9a/3e6d9a9a8f8e8f8e8f8e8f8e8f8e8f8e.jpg" alt="Album Cover" class="album-cover">
-                <div class="disc-center"></div>
+    <div class="music-player">
+        <!-- Left Side (Album + Controls) -->
+        <div class="player-side">
+            <h1 class="player-title">Sweet Ache Radio</h1>
+            <div class="vinyl" id="vinyl"></div>
+            
+            <div class="song-info">
+                <h2 id="song-title">Song Title</h2>
+                <p id="artist">Artist</p>
+            </div>
+
+            <div class="controls">
+                <button id="prevBtn"><i class="fas fa-backward"></i></button>
+                <button id="playBtn"><i class="fas fa-play"></i></button>
+                <button id="nextBtn"><i class="fas fa-forward"></i></button>
+            </div>
+
+            <div class="progress-container">
+                <div class="progress-bar" id="progress"></div>
+            </div>
+
+            <div class="time-display">
+                <span id="current-time">0:00</span>
+                <span id="duration">0:00</span>
             </div>
         </div>
 
-        <div class="song-info">
-            <h2 class="song-title">Pretty Song</h2>
-            <p class="artist">Beautiful Artist</p>
-        </div>
-
-        <div class="progress-container" id="progress-container">
-            <div class="progress-bar" id="progress-bar"></div>
-        </div>
-
-        <div class="time-info">
-            <span class="current-time" id="current-time">0:00</span>
-            <span class="duration" id="duration">0:00</span>
-        </div>
-
-        <div class="controls">
-            <button class="control-btn shuffle-btn" id="shuffle-btn">
-                <i class="fas fa-random"></i>
-            </button>
-            <button class="control-btn prev-btn" id="prev-btn">
-                <i class="fas fa-step-backward"></i>
-            </button>
-            <button class="control-btn play-btn" id="play-btn">
-                <i class="fas fa-play"></i>
-            </button>
-            <button class="control-btn next-btn" id="next-btn">
-                <i class="fas fa-step-forward"></i>
-            </button>
-            <button class="control-btn repeat-btn" id="repeat-btn">
-                <i class="fas fa-redo"></i>
-            </button>
-        </div>
-
-        <div class="volume-container">
-            <i class="fas fa-volume-down"></i>
-            <input type="range" class="volume-slider" id="volume-slider" min="0" max="1" step="0.01" value="0.7">
-            <i class="fas fa-volume-up"></i>
+        <!-- Right Side (Lyrics) -->
+        <div class="lyrics-side">
+            <div class="lyrics-box" id="lyrics-box">
+                <h3><i class="fas fa-music"></i> Lyrics</h3>
+                <div class="lyrics" id="lyrics">
+                    [Loading lyrics...]<br><br>
+                    <!-- Lyrics will appear here! -->
+                </div>
+            </div>
         </div>
     </div>
 
     <audio id="audio"></audio>
-
     <script src="script.js"></script>
 </body>
 </html>
