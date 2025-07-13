@@ -1,58 +1,46 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Lovers Poems MP3 👑</title>
-    <link rel="stylesheet" href="styles.css"> 
+    <title>Sweet Ache Radio 👑</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
-<style>
-    body { 
-        background: #000 !important; 
-        color: white !important;
-        font-family: 'Segoe UI' !important;
-    }
-    .music-player {
-        display: flex !important;
-        width: 800px !important;
-        background: #1a1a1a !important;
-    }
-</style>
 <body>
-    <div class="music-player">
-        <!-- Left Side (Album + Controls) -->
-        <div class="player-side">
-            <h1 class="player-title">Sweet Ache Radio</h1>
-            <div class="vinyl" id="vinyl"></div>
+    <div class="apple-music-clone">
+        <!-- Left Side - Album Art -->
+        <div class="album-side">
+            <div class="vinyl" id="vinyl">
+                <img src="https://i.imgur.com/JWbESBg.png" alt="Album Cover" id="album-cover">
+            </div>
+        </div>
+
+        <!-- Right Side - Song Info -->
+        <div class="info-side">
+            <h1>Sweet Ache Radio</h1>
             
-            <div class="song-info">
+            <div class="song-meta">
                 <h2 id="song-title">Song Title</h2>
                 <p id="artist">Artist</p>
             </div>
 
-            <div class="controls">
-                <button id="prevBtn"><i class="fas fa-backward"></i></button>
-                <button id="playBtn"><i class="fas fa-play"></i></button>
-                <button id="nextBtn"><i class="fas fa-forward"></i></button>
-            </div>
-
-            <div class="progress-container">
-                <div class="progress-bar" id="progress"></div>
-            </div>
-
-            <div class="time-display">
-                <span id="current-time">0:00</span>
-                <span id="duration">0:00</span>
-            </div>
-        </div>
-
-        <!-- Right Side (Lyrics) -->
-        <div class="lyrics-side">
-            <div class="lyrics-box" id="lyrics-box">
-                <h3><i class="fas fa-music"></i> Lyrics</h3>
-                <div class="lyrics" id="lyrics">
-                    [Loading lyrics...]<br><br>
-                    <!-- Lyrics will appear here! -->
+            <!-- Lyrics Box -->
+            <div class="lyrics-box">
+                <div id="lyrics">
+                    [Lyrics will appear here]<br><br>
+                    <i class="fas fa-music"></i> Tap play to begin
                 </div>
+            </div>
+
+            <!-- Controls -->
+            <div class="controls">
+                <button id="prev-btn"><i class="fas fa-backward"></i></button>
+                <button id="play-btn"><i class="fas fa-play"></i></button>
+                <button id="next-btn"><i class="fas fa-forward"></i></button>
+            </div>
+
+            <!-- Progress Bar -->
+            <div class="progress-container">
+                <div class="progress-bar" id="progress-bar"></div>
             </div>
         </div>
     </div>
